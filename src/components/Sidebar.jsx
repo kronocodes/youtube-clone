@@ -37,7 +37,7 @@ import profile from "../assets/Header/profile.svg"
 
 const Sidebar = () => {
      const isMenuOpen = useSelector(store => store.app.isMenuOpen);
-     const breakpoint = 1024;
+     const breakpoint = 1312;
      const dispatch = useDispatch();
 
      useEffect(() => {
@@ -73,30 +73,30 @@ const Sidebar = () => {
 
      return isMenuOpen ? (
           !isMobile() ? (
-               <div className='flex flex-col px-3 pt-2 border-r h-screen'>
+               <div className='flex flex-col px-3 pt-2 border-r h-full w-[236px] text-sm top-10 fixed'>
                     <div className='flex flex-col border-b  pb-3'>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img
                                    alt='home' className='w-[25px] mr-6' src={Home} />
-                              <span className='text-sm'>Home</span>
+                              <span >Home</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Shorts} />
-                              <span className='text-sm'>Shorts</span>
+                              <span>Shorts</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Subs} />
-                              <span className='text-sm'>Subscriptions</span>
+                              <span>Subscriptions</span>
                          </button>
                     </div>
                     <div className='flex flex-col border-b py-3'>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Library} />
-                              <span className='text-sm'>Library</span>
+                              <span>Library</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={History} />
-                              <span className='text-sm'>History</span>
+                              <span>History</span>
                          </button>
                     </div>
                     <div className='pl-5 pb-5 border-b'>
@@ -110,84 +110,84 @@ const Sidebar = () => {
                          <h1 className='py-1 pl-3'>Explore</h1>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Trending} />
-                              <span className='text-sm'>Trending</span>
+                              <span>Trending</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Shopping} />
-                              <span className='text-sm'>Shopping</span>
+                              <span>Shopping</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Music} />
-                              <span className='text-sm'>Music</span>
+                              <span>Music</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Movies} />
-                              <span className='text-sm'>Movies</span>
+                              <span>Movies</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Live} />
-                              <span className='text-sm'>Live</span>
+                              <span>Live</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Gaming} />
-                              <span className='text-sm'>Gaming</span>
+                              <span>Gaming</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={News} />
-                              <span className='text-sm'>News</span>
+                              <span>News</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Sports} />
-                              <span className='text-sm'>Sports</span>
+                              <span>Sports</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Learning} />
-                              <span className='text-sm'>Learning</span>
+                              <span>Learning</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={FB} />
-                              <span className='text-sm'>Fashion & Beauty</span>
+                              <span>Fashion & Beauty</span>
                          </button>
                     </div>
 
                     <div className='border-b py-3'>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-6 h-6 mr-6' src={Browse} />
-                              <span className='text-sm'>Browse</span>
+                              <span>Browse</span>
                          </button>
                     </div>
                     <div className='flex flex-col border-b py-3'>
                          <h1 className='pl-3 py-1 text-[15px]'>More from YouTube</h1>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Ytpremium} />
-                              <span className='text-sm'>YouTube Premium</span>
+                              <span>YouTube Premium</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Ytmusic} />
-                              <span className='text-sm'>YouTube Music</span>
+                              <span>YouTube Music</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Ytkids} />
-                              <span className='text-sm'>YouTube Kids</span>
+                              <span>YouTube Kids</span>
                          </button>
                     </div>
                     <div className='flex flex-col border-b  py-3'>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img
                                    alt='home' className='w-[25px] mr-6' src={Settings} />
-                              <span className='text-sm'>Settings</span>
+                              <span>Settings</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Report} />
-                              <span className='text-sm'>Report history</span>
+                              <span>Report history</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Help} />
-                              <span className='text-sm'>Help</span>
+                              <span>Help</span>
                          </button>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img alt='home' className='w-[25px] mr-6' src={Send} />
-                              <span className='text-sm'>Send feedback</span>
+                              <span>Send feedback</span>
                          </button>
                     </div>
                     <div className='flex flex-wrap py-3 pl-3 text-[13px]'>
@@ -200,30 +200,30 @@ const Sidebar = () => {
                </div>
           ) : (
 
-                    <div className='flex flex-col px-3 pt-2 border-r'>
+                    <div className='flex flex-col px-3 pt-2 border-r text-sm'>
                          <div className='flex flex-col border-b  pb-3'>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img
                                         alt='home' className='w-[25px] mr-6' src={Home} />
-                                   <span className='text-sm'>Home</span>
+                                   <span>Home</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Shorts} />
-                                   <span className='text-sm'>Shorts</span>
+                                   <span>Shorts</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Subs} />
-                                   <span className='text-sm'>Subscriptions</span>
+                                   <span>Subscriptions</span>
                               </button>
                          </div>
                          <div className='flex flex-col border-b py-3'>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Library} />
-                                   <span className='text-sm'>Library</span>
+                                   <span>Library</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={History} />
-                                   <span className='text-sm'>History</span>
+                                   <span>History</span>
                               </button>
                          </div>
                          <div className='pl-5 pb-5 border-b'>
@@ -237,84 +237,84 @@ const Sidebar = () => {
                               <h1 className='py-1 pl-3'>Explore</h1>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Trending} />
-                                   <span className='text-sm'>Trending</span>
+                                   <span>Trending</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Shopping} />
-                                   <span className='text-sm'>Shopping</span>
+                                   <span>Shopping</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Music} />
-                                   <span className='text-sm'>Music</span>
+                                   <span>Music</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Movies} />
-                                   <span className='text-sm'>Movies</span>
+                                   <span>Movies</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Live} />
-                                   <span className='text-sm'>Live</span>
+                                   <span>Live</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Gaming} />
-                                   <span className='text-sm'>Gaming</span>
+                                   <span>Gaming</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={News} />
-                                   <span className='text-sm'>News</span>
+                                   <span>News</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Sports} />
-                                   <span className='text-sm'>Sports</span>
+                                   <span>Sports</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Learning} />
-                                   <span className='text-sm'>Learning</span>
+                                   <span>Learning</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={FB} />
-                                   <span className='text-sm'>Fashion & Beauty</span>
+                                   <span>Fashion & Beauty</span>
                               </button>
                          </div>
 
                          <div className='border-b py-3'>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-6 h-6 mr-6' src={Browse} />
-                                   <span className='text-sm'>Browse</span>
+                                   <span>Browse</span>
                               </button>
                          </div>
                          <div className='flex flex-col border-b py-3'>
                               <h1 className='pl-3 py-1 text-[15px]'>More from YouTube</h1>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Ytpremium} />
-                                   <span className='text-sm'>YouTube Premium</span>
+                                   <span>YouTube Premium</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Ytmusic} />
-                                   <span className='text-sm'>YouTube Music</span>
+                                   <span>YouTube Music</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Ytkids} />
-                                   <span className='text-sm'>YouTube Kids</span>
+                                   <span>YouTube Kids</span>
                               </button>
                          </div>
                          <div className='flex flex-col border-b  py-3'>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img
                                         alt='home' className='w-[25px] mr-6' src={Settings} />
-                                   <span className='text-sm'>Settings</span>
+                                   <span>Settings</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Report} />
-                                   <span className='text-sm'>Report history</span>
+                                   <span>Report history</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Help} />
-                                   <span className='text-sm'>Help</span>
+                                   <span>Help</span>
                               </button>
                               <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                                    <img alt='home' className='w-[25px] mr-6' src={Send} />
-                                   <span className='text-sm'>Send feedback</span>
+                                   <span>Send feedback</span>
                               </button>
                          </div>
                          <div className='flex flex-wrap py-3 pl-3 text-[13px]'>

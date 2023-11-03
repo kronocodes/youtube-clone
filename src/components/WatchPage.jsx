@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { closeMenu } from '../utils/appSlice';
-import { VIDEO_API } from '../utils/constants';
+import { VIDEO_API, SUGGESTED_VIDEO_LIST_API_URL } from '../utils/constants';
 import ChannelDetails from './ChannelDetails';
 import CommentsContainer from './CommentsContainer';
 import Description from './Description';
@@ -12,14 +12,22 @@ const WatchPage = () => {
 
      const [searchParams] = useSearchParams();
      const [videos, setVideos] = useState([]);
+     const [suggested, setSuggested] = useState([]);
      const videoId = searchParams.get("v");
      useEffect(() => {
           getVideos();
-     }, []);
+          getSuggestedVideos();
+     }, [videoId]);
 
      const getVideos = async () => {
           const data = await fetch(VIDEO_API + videoId);
-          setVideos(data);
+          const json = await data.json();
+          setVideos(json?.items[0]);
+     };
+     const getSuggestedVideos = async () => {
+          const data = await fetch(SUGGESTED_VIDEO_LIST_API_URL + videoId);//notworking
+          const json = await data.json();
+          setSuggested(json.items);
      };
 
      const dispatch = useDispatch();
@@ -29,23 +37,31 @@ const WatchPage = () => {
 
      return (
           <>
-               <div className='w-screen ml-6 flex flex-wrap'>
+               <div className='ml-6 pt-6 pr-6 flex flex-wrap w-full'>
                     <div className=''>
                          <iframe
-                              className='aspect-video w-screen h-screen'
+                              className='aspect-video w-full'
                               src={"https://www.youtube.com/embed/" + videoId}
                               title="YouTube video player"
-                              frameBorder="2"
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" allowFullScreen>
                          </iframe>
-                         <div className='bg-gray-500'> <ChannelDetails /></div>
-                         <div><Description /></div>
-                         <div><CommentsContainer /></div>
-                    </div>
+                         </div>
+                         <div>
+                              <div className='mt-3 w-full'></div>
+                              <div className='mt-3 mb-6'>
+                                   <div> <ChannelDetails info={videos}  /></div>
+                                   <div> <Description videos={videos}/>
+                              </div>
+                         </div>
+                         
+                         <div><CommentsContainer info={videoId} count={videos?.statistics?.commentCount} /></div>
+                         </div>
                </div>
                <div className=''>
-                    <WatchPageSuggestion />
-               </div>
+               {/* {suggested.map((eachvideo) => (
+          <WatchPageSuggestion  key={eachvideo.id.videoId===undefined?eachvideo.id:eachvideo.id.videoId} eachvideo={eachvideo} />
+        ))} */}
+                    </div>
           </>
      )
 }

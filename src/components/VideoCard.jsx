@@ -1,5 +1,4 @@
 import React from 'react'
-import { convertToMillion, randomNumber } from "../utils/conversion";
 
 const VideoCard = ({ info }) => {
      const { snippet, statistics } = info;
@@ -25,7 +24,7 @@ const VideoCard = ({ info }) => {
                     <li className='pt-3 font-semibold col-start-2 col-end-8 leading-5 line-clamp-2'>{title}</li>
                     <div className='pt-2 \flex flex-col text-[14px] leading-5 text-gray-700 col-start-2 col-end-8 row-start-2 row-end-3'>
                          <li className=''>{channelTitle}</li>
-                         {convertToMillion(viewCount)} M views . {randomNumber()} days ago {" "}
+                         {viewCount} M views . 7 days ago {" "}
                     </div>
                </ul>
           </div>

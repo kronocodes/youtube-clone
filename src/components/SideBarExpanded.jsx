@@ -13,7 +13,7 @@ const SideBarExpanded = () => {
   return (
     <div className={!isSideBarOpen && "hidden"}>
       <div
-        className="w-full h-full bg-black/40 absolute top-0 left-0 z-10"
+        className="sticky w-full h-full bg-black/40 top-0 left-0 z-10"
         onClick={toggleSideBarHandler}
       ></div>
       <div className="sidebar2 border dark:border-none flex  flex-col w-[15rem]  h-full overflow-y-scroll overflow-x-hidden absolute top-0 left-0 bg-white z-20 dark:bg-zinc-900 dark:text-white">

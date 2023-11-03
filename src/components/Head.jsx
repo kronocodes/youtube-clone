@@ -51,7 +51,7 @@ const Head = () => {
      };
      //656px w pe search bar turns to a button
      return (
-          <div className="sticky flex px-4 items-center flex-row justify-between">
+          <div className="bg-white sticky top-0 flex px-4 pb-1 items-center flex-row justify-between">
                <div className="flex items-center mt-1">
                     <img
                          onClick={() => toggleMenuHandler()}
@@ -74,7 +74,7 @@ const Head = () => {
                               e.preventDefault()
                               setSearchQuery("")
                          }}>
-                         <div className="flex items-center ml-10 rounded-3xl border-2 min-w-[600px]">
+                         <div className="flex items-center ml-10 rounded-3xl border-2 max-w-[600px]">
                               <input
                                    type="text"
                                    placeholder="Search"
