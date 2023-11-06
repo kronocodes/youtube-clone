@@ -62,7 +62,7 @@ const Head = () => {
                     <a href='/'>
                          <img
                               alt='ytlogo'
-                              className="ml-4 w-[100px]"
+                              className="ml-4 w-[100px] bg-white"
                               src={Youtubelogo}
                          />
                     </a>
