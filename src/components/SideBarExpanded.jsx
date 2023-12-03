@@ -23,7 +23,7 @@ const SideBarExpanded = () => {
             onClick={toggleSideBarHandler}
           >
             <img
-              alt=""
+              alt="photu"
               src="https://cdn.pixabay.com/photo/2017/11/10/05/05/youtube-2935416_1280.png"
               size="1.5rem"
               title="hambergur menu"
