@@ -12,10 +12,23 @@ const Head = () => {
      const [searchQuery, setSearchQuery] = useState("");
      const [suggestions, setSuggestions] = useState([]);
      const [showSuggestions, setShowSuggestions] = useState(false);
+     const [isSearchButton, setIsSearchButton] = useState(window.innerWidth <= 656);
 
      const searchCache = useSelector((store) => store.search);
      const dispatch = useDispatch();
 
+     useEffect(() => {
+          const handleResize = () => {
+            setIsSearchButton(window.innerWidth <= 645);
+          };
+      
+          window.addEventListener("resize", handleResize);
+      
+          return () => {
+            window.removeEventListener("resize", handleResize);
+          };
+        }, []);
+        
      useEffect(() => {
           const timer = setTimeout(() => {
                if (searchCache[searchQuery]) {

@@ -16,4 +16,3 @@ const ButtonList = () => {
 }
 
 export default ButtonList
-{/*relative sticky top-14 flex flex-auto items-center space-x-3 px-5 py-2.5 border-t border-b border-sideBarHoverBg bg-topNavBg bg-opacity-95 z-20 overflow-x-scroll overflow-y-hidden scrollbar-none */}

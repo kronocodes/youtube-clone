@@ -60,7 +60,6 @@ const Sidebar = () => {
                     dispatch(toggleMenu());
                }
           };
-
           window.addEventListener("resize", handleWindowResize);
 
           return () => {
@@ -71,7 +70,7 @@ const Sidebar = () => {
 
      return isMenuOpen ? (
           !isMobile() ? (
-               <div className='flex flex-col px-3 pt-2 border-r h-full w-[236px] text-sm top-10 fixed bg-white'>
+               <div className='flex flex-col px-3 pt-2 border-r h-full w-[236px] text-sm top-10 bg-white'>
                     <div className='flex flex-col border-b  pb-3'>
                          <button className='flex items-center rounded-xl px-3 h-10 w-56 hover:bg-zinc-100'>
                               <img
