@@ -68,14 +68,14 @@ const Head = () => {
                <div className="flex items-center mt-1">
                     <img
                          onClick={() => toggleMenuHandler()}
-                         className="h-[31px] cursor-pointer mx-2"
+                         className="h-[31px] cursor-pointer mx-2 hidden md:flex"
                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAARVBMVEX///8jHyAgHB0OBQgMAAWlpKQpJSaenZ309PUAAAAIAAD8/Pz5+fna2tqop6dvbW1oZmevrq4tKivFxMQYExRiYGC+vr7Dc4WrAAABB0lEQVR4nO3cS3LCMBAFQGIIIBPbhN/9jxqSyiIsTUnlydB9g1eSNV5MvdUKAAAAAAAAAAAAAAAAXtEwvscwDk3yHabSb2Loy/TRIOHUv8XRH+sHHMrSqR6U+hd1jHSE90P8lHC2/Lc0/0vzMy3WMdynxaFBwu+Jv4uh0cQHAAAAAAAAAIB59jG0ijdcT9sYTtcmK0PncumiuJRz/YD7bbf0ut4f3br+GvQt2PblrXrC3WbpUA/6sXrC/GeY/zvM/5aGmofHZiu0S//M/GoVDwAAAAAAAAAAZsjeuRerN1HL7hPy95fm76DNnzD/Lc3/0rxAJ3v+Xn0AAAAAAAAAAAAAAAD4T74AYhs1O+vt3ioAAAAASUVORK5CYII="
                          alt="menu"
                     />
                     <a href='/'>
                          <img
                               alt='ytlogo'
-                              className="ml-4 w-[100px] bg-white"
+                              className="md:ml-4 ml-2 w-[100px] bg-white"
                               src={Youtubelogo}
                          />
                     </a>
@@ -105,7 +105,7 @@ const Head = () => {
                               </button>
                          </div>
                          {showSuggestions &&
-                              <div className="absolute bg-white rounded-xl ml-10 p-2 pl-5 w-[600px] shadow-2xl">
+                              <div className="absolute mx-auto bg-white rounded-xl p-2 max-w-[600px] shadow-2xl">
                                    <ul>
                                         {suggestions.map((sug, index) => (
                                              <div className="py-1 flex items-center">
@@ -121,13 +121,12 @@ const Head = () => {
                          }
                     </form>
 
-                    <div><img className="w-6 ml-3" src={mic} alt="" /></div>
+                    <div className="hidden md:flex"><img className="w-6 ml-3" src={mic} alt="" /></div>
                </div>
                <div className="flex items-center flex-row mt-1">
-                    <div className="mr-4"> <img src={dots} alt="dots" /></div>
                     <div className="flex border px-3 py-2 rounded-3xl">
                          <img src={profile} alt="pp" />
-                         <button className='px-1 text-blue-600 text-[500]'>Sign in</button>
+                         <button className='px-1 text-blue-600 text-[500] hidden md:flex'>Sign in</button>
                     </div>
                </div>
           </div>

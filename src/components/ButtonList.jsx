@@ -5,7 +5,7 @@ const list = ["All", "Live", "Gaming", "Music", "Cricket", "Comedy", "Cooking", 
 
 const ButtonList = () => {
   return (
-    <div className='flex top-14 sticky flex-nowrap text-sm overflow-x-scroll max-w-screen-xl mx-5 snap-x snap-mandatory no-scrollbar scrollbar-none'>
+    <div className='bg-white flex top-14 sticky flex-nowrap text-sm mx-5'>
       {list.map((list, index) => {
         return (
           <Button key={index} name={list} />

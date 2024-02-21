@@ -6,10 +6,10 @@ const VideoCard = ({ info }) => {
      const { viewCount } = statistics;
 
      return (
-          <div className='mb-12 h-[302px] w-[360px]'>
+          <div className='mb-14 h-[302px] aspect-auto md:w-[360px] w-full max-w-[424px]'>
                <div className=''>
                     <img
-                         className='rounded-xl w-[360px]'
+                         className='rounded-xl md:w-[360px] w-full'
                          alt="thumbnail"
                          src={thumbnails.medium.url} />
                </div>
