@@ -1,11 +1,13 @@
 import React from "react";
 import { useState } from "react";
 
-function formatViewCount(viewCount) {
-  if (viewCount >= 1000000) {
-    return `${(viewCount / 1000000).toFixed(1)}M`;
+function formatViews(views) {
+  if (views < 1000) {
+      return views;
+  } else if (views < 1000000) {
+      return (views / 1000).toFixed(0) + 'K';
   } else {
-    return viewCount.toLocaleString();
+      return (views / 1000000).toFixed(1) + 'M';
   }
 }
 
@@ -35,8 +37,8 @@ const Description = ({ videos }) => {
 
   return (
     <>
-      <div className="bg-neutral-100 p-3 text-sm rounded-2xl">
-        <div className="font-bold text-neutral-700">{formatViewCount(viewCount)} views</div>
+      <div className="bg-neutral-100 p-3 mb-6 text-sm rounded-2xl">
+        <div className="font-bold text-neutral-700">{formatViews(viewCount)} views</div>
 
         <div className="text-neutral-700">{descriptionToDisplay}</div>
         

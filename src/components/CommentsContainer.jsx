@@ -9,16 +9,23 @@ const CommentsContainer = ({info, count}) => {
    const getComments = async () => {
     const data = await fetch(COMMENTS_LIST_API+videoId);
     const json = await data.json();
-   //  const com=json?.items[0]?.snippet?.topLevelComment?.snippet
     setComments(json?.items);
-   //  console.log(comments);
   };
   useEffect(() => {
    getComments();
  }, []);
+ function formatViews(views) {
+   if (views < 1000) {
+       return views;
+   } else if (views < 1000000) {
+       return (views / 1000).toFixed(0) + 'K';
+   } else {
+       return (views / 1000000).toFixed(1) + 'M';
+   }
+ }
    return (
       <>
-      <div className='font-bold text-xl my-2'>{count} Comments</div>
+      <div className='font-bold text-xl my-2'>{formatViews(count)} Comments</div>
       <div className='flex items-center mb-4'>
          <img className='w-10 h-10 rounded-full ' src='https://yt3.ggpht.com/a/default-user=s88-c-k-c0x00ffffff-no-rj'></img>
       <input
@@ -31,7 +38,7 @@ const CommentsContainer = ({info, count}) => {
       </div>
       <div>
          {comments.map((com)=>(
-            <Comment key={com.id.videoId} com={com}/>
+            <Comment key={com.id} com={com}/>
          ))}
       </div>
       </>

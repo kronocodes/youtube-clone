@@ -325,57 +325,58 @@ const Sidebar = () => {
           )
      ) : (
           !isMobile() && (
-               <div className="top-14 mx-1 text-[11px] items-center w-[74px] ">
-                    <div className='mt-1 ml-1 flex flex-col'>
-                         <Link to="/" className=" w-full">
-                              <div className="py-4 flex flex-col items-center justify-center hover:bg-zinc-200  rounded-xl cursor-pointer">
-                                   <img
-                                        className='h-[26px] my-1'
-                                        alt="home-logo"
-                                        src={Home} />
-                                   <span className=''>Home</span>
-                              </div>
-                         </Link>
-                         <Link to="/" className=" w-full">
-                              <div className="py-4 flex flex-col items-center  justify-center hover:bg-zinc-200 rounded-xl cursor-pointer">
-                                   <img
-                                        className='h-[26px] my-1'
-                                        src={Shorts}
-                                        alt="shorts-logo"
-                                   />
-                                   <span>Shorts</span>
-                              </div>
-                         </Link>
-                         <Link to="/" className=" w-full">
-                              <div className="py-4 flex flex-col items-center justify-center hover:bg-zinc-200 rounded-xl cursor-pointer">
-                                   <img
-                                        className='h-[26px] my-1'
-                                        alt="shorts-logo"
-                                        src={Subs}
-                                   />
-                                   <p className='m'>Subscriptions</p>
-                              </div>
-                         </Link>
-                         <Link to="/" className=" w-full">
-                              <div className="py-4 flex flex-col items-center justify-center hover:bg-zinc-200 rounded-xl cursor-pointer">
-                                   <img
-                                        className='h-[26px] my-1'
-                                        alt="shorts-logo"
-                                        src={Library} />
-                                   <span>Library</span>
-                              </div>
-                         </Link>
-                         <Link to="/" className=" w-full">
-                              <div className="py-4 flex flex-col items-center justify-center hover:bg-zinc-200 rounded-xl cursor-pointer">
-                                   <img
-                                        className='h-[26px] mb-1'
-                                        alt="shorts-logo"
-                                        src={History} />
-                                   <span>History</span>
-                              </div>
-                         </Link>
-                    </div>
-               </div>
+               <></>
+               // <div className="top-14 mx-1 text-[11px] items-center w-[74px] ">
+               //      <div className='mt-1 ml-1 flex flex-col'>
+               //           <Link to="/" className=" w-full">
+               //                <div className="py-4 flex flex-col items-center justify-center hover:bg-zinc-200  rounded-xl cursor-pointer">
+               //                     <img
+               //                          className='h-[26px] my-1'
+               //                          alt="home-logo"
+               //                          src={Home} />
+               //                     <span className=''>Home</span>
+               //                </div>
+               //           </Link>
+               //           <Link to="/" className=" w-full">
+               //                <div className="py-4 flex flex-col items-center  justify-center hover:bg-zinc-200 rounded-xl cursor-pointer">
+               //                     <img
+               //                          className='h-[26px] my-1'
+               //                          src={Shorts}
+               //                          alt="shorts-logo"
+               //                     />
+               //                     <span>Shorts</span>
+               //                </div>
+               //           </Link>
+               //           <Link to="/" className=" w-full">
+               //                <div className="py-4 flex flex-col items-center justify-center hover:bg-zinc-200 rounded-xl cursor-pointer">
+               //                     <img
+               //                          className='h-[26px] my-1'
+               //                          alt="shorts-logo"
+               //                          src={Subs}
+               //                     />
+               //                     <p className='m'>Subscriptions</p>
+               //                </div>
+               //           </Link>
+               //           <Link to="/" className=" w-full">
+               //                <div className="py-4 flex flex-col items-center justify-center hover:bg-zinc-200 rounded-xl cursor-pointer">
+               //                     <img
+               //                          className='h-[26px] my-1'
+               //                          alt="shorts-logo"
+               //                          src={Library} />
+               //                     <span>Library</span>
+               //                </div>
+               //           </Link>
+               //           <Link to="/" className=" w-full">
+               //                <div className="py-4 flex flex-col items-center justify-center hover:bg-zinc-200 rounded-xl cursor-pointer">
+               //                     <img
+               //                          className='h-[26px] mb-1'
+               //                          alt="shorts-logo"
+               //                          src={History} />
+               //                     <span>History</span>
+               //                </div>
+               //           </Link>
+               //      </div>
+               // </div>
           )
      );
 };

@@ -17,7 +17,7 @@ const WatchPageSuggestion = ({}) => {
     setVideos(json.items);
   };
   return (
-     <div className='h-screen w-full pt-6 lg:w-[402px]'>
+     <div className='h-full w-full md:w-[402px]'>
           {videos.map((video) => (
         <Link key={video.id} to={`/watch?v=${video.id}`}>
           <div className="my-2">

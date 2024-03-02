@@ -6,7 +6,7 @@ import { cacheResults } from "../utils/searchSlice";
 import Youtubelogo from "../assets/Header/YoutubeLogo.svg"
 import mic from "../assets/Header/mic.svg"
 import profile from "../assets/Header/profile.svg"
-import dots from "../assets/Header/3dots.svg"
+import { Link } from "react-router-dom";
 
 const Head = () => {
      const [searchQuery, setSearchQuery] = useState("");
@@ -16,6 +16,11 @@ const Head = () => {
 
      const searchCache = useSelector((store) => store.search);
      const dispatch = useDispatch();
+
+     const handleSuggestionClick = (selectedSuggestion) => {
+          setSearchQuery(selectedSuggestion);
+          setShowSuggestions(false);
+      };
 
      useEffect(() => {
           const handleResize = () => {
@@ -108,7 +113,7 @@ const Head = () => {
                               <div className="absolute mx-auto bg-white rounded-xl p-2 max-w-[600px] shadow-2xl">
                                    <ul>
                                         {suggestions.map((sug, index) => (
-                                             <div className="py-1 flex items-center">
+                                             <div className="py-1 flex items-center" onClick={() => handleSuggestionClick(sug)}>
                                                   <img
                                                        className="h-[18px]"
                                                        alt="search"
