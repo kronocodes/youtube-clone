@@ -30,10 +30,10 @@ const WatchPage = () => {
   return (
     <>
       <div className="mx-auto">
-        <div className="ml-6 pt-6 pr-6 flex gap-x-2">
-          <div className="w-full max-w-[1280px]">
+        <div className="ml-6 mr-6 lg:mr-0 pt-6 flex gap-x-2">
+          <div className="w-full lg:max-w-[1280px]">
             <iframe
-              className="aspect-video w-full"
+              className="aspect-video w-full rounded-xl"
               src={"https://www.youtube.com/embed/" + videoId}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share"

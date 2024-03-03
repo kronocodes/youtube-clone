@@ -15,7 +15,7 @@ const ChannelDetails = ({ info }) => {
   }
   return (
     <>
-      <div className="font-semibold text-lg leading-6 w-full">{info?.snippet?.title}</div>
+      <div className="font-semibold text-lg leading-6 w-full line-clamp-2">{info?.snippet?.title}</div>
       <div className="text-neutral-700 w-full">
         <div className="flex items-center">
           <div className="flex my-3 md:flex-row flex-col justify-between gap-y-3 w-full">
@@ -28,7 +28,7 @@ const ChannelDetails = ({ info }) => {
                 />
               </div>
               <div className="flex flex-col">
-                <div className="text-sm font-semibold align-middle mr-5">
+                <div className="text-sm font-semibold align-middle mr-5 ">
                   {info?.snippet?.channelTitle}
                 </div>
                 <div className="text-xs text-zinc-600 align-middle">
@@ -39,13 +39,12 @@ const ChannelDetails = ({ info }) => {
                   Subscribe
                 </button>
             </div>
-            <div className="flex justify-end">
-              <button className="flex items-center justify-center px-3 bg-neutral-100 h-9 rounded-l-full text-sm font-semibold">
+            <div className="flex gap-x-2 justify-end">
+              <button className="flex items-center justify-center px-3 bg-neutral-100 h-9 rounded-full text-sm font-semibold">
                 <img className="px-1" src={like}></img>
                 {formatViews(info?.statistics?.likeCount)}
-              </button>
-              <button className="flex items-center justify-center bg-neutral-100 border-l h-9 rounded-r-full px-3">
-                <img className="rotate-180 mr-1" src={like}></img>
+                <div className="w-[1px] bg-zinc-300 h-4/5 mx-3"></div>
+                <img className="rotate-180 " src={like}></img>
               </button>
               <button className="flex justify-center items-center bg-neutral-100 h-9 px-3 rounded-full text-sm">
                 <img src={share}></img>Share
